@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import {AppWrapper, MotionWrapper} from '../../wrapper';
 import './Work.scss'
 
@@ -6,6 +6,7 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import { client, urlFor } from '../../client';
 import { arrayUnique } from '../../utilities';
+import Context from '../../Context';
 
 const Work = () => {
 
@@ -21,18 +22,20 @@ const Work = () => {
     opacity: 1
   })
 
-  useEffect(() => {
-    const query = '*[_type == "works"]'
+  const [language] = useContext(Context)
 
+  useEffect(() => {
+    const query = `*[_type == "works" && language == "${language}"]`
     client.fetch(query)
       .then(data => {
         setWorks(data)
         setFilterWork(data)
         setLoading(false)
       })
-  }, [])
+  }, [language])
 
   useEffect(() => {
+    console.log(works)
     if (!isLoading) {
       works.forEach(work => {
         setTags(tags => [
@@ -64,12 +67,21 @@ const Work = () => {
 
   return (
     <div className='app__work'>
-      <h2 className='head-text'>
-        My creative
-        <span> Portfolio</span>
-        <br />
-        Section
-      </h2>
+      {language === "English" && 
+        <h2 className='head-text'>
+          My creative
+          <span> Portfolio</span>
+          <br />
+          Section
+        </h2>
+      }
+
+      {language === "Portuguese" && 
+        <h2 className='head-text'>
+          Meus projetos
+          <span> Criativos</span>
+        </h2>
+      }
       <div className="app__work-filter">
         {!isLoading && tags.sort((a,b) => a > b ? 1 : -1).map((item, index) => {
           return (

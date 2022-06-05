@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { NavigationDots, SocialMedia } from '../components'
+import Context from '../Context'
 
 const AppWrap = (Component, idName, classNames) => function HOC() {
+
+  const [language] = useContext(Context)
+
   return (
     <div id={idName} className={`app__container ${classNames}`}>
       <SocialMedia/>
@@ -14,7 +18,7 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
           </p>
 
           <p className='p-text'>
-            All rights reserved
+            {language === "English" ? "All rights reserved" : "Todos os direitos reservados"}
           </p>
         </div>
       </div>

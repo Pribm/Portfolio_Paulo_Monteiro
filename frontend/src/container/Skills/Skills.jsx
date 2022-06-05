@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 
 import { motion } from 'framer-motion'
 import ReactTooltip from 'react-tooltip'
@@ -7,29 +7,28 @@ import {AppWrapper, MotionWrapper} from '../../wrapper'
 import { urlFor, client } from '../../client'
 
 import './Skills.scss'
+import Context from '../../Context'
 
 
 const Skills = () => {
 
   const [skills, setSkills] = useState([])
-  const [experiences, setExperiences] = useState([])
+
+  const [language] = useContext(Context)
 
   useEffect(() => {
-    const query = '*[_type == "experiences"]'
     const skillsQuery = '*[_type == "skills"]'
 
     client.fetch(skillsQuery).then(data => {
       setSkills(data)
     })
-
-    client.fetch(query).then(data => {
-      setExperiences(data)
-    })
   }, [])
 
   return (
     <div className='app__skills'>
-      <h2 className='head-text'>Skills</h2>
+      <h2 className='head-text'>{
+        language === "English" ? "Skills" : "Habilidades"
+      }</h2>
       <div className="app__skills-container">
         <motion.div className='app__skills-list'>
           {skills.map((skill, index) => {

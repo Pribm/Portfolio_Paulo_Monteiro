@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Header.scss'
 
 import {motion} from 'framer-motion'
@@ -9,6 +9,7 @@ import { images } from '../../constants'
 import './Header.scss'
 
 import resume from '../../assets/PAULO VINÍCIUS RIBEIRO MONTEIRO - RESUME.pdf'
+import Context from '../../Context'
 
 const scaleVariants = {
   whileInView: {
@@ -22,6 +23,9 @@ const scaleVariants = {
 }
 
 const Header = () => {
+
+  const [language] = useContext(Context)
+
   return (
     <>
     <header className="app__header app__flex">
@@ -35,19 +39,19 @@ const Header = () => {
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{marginLeft: 20}}>
-              <p className="p-text">Hello, I am</p>
+              <p className="p-text">{language === "English" ? "Hello, I am" : "Oi, muito prazer, eu me chamo"}</p>
               <h1 className="head-text">Paulo Monteiro</h1>
             </div>
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Musician</p>
-            <p className="p-text">Graphic Designer</p>
+            <p className="p-text">{language === 'English' ? 'Web Developer' : 'Desenvolvedor Web'}</p>
+            <p className="p-text">{language === 'English' ? 'Musician' : 'Músico'}</p>
+            <p className="p-text">{language === 'English' ? 'Graphic Designer' : 'Designer Gráfico'}</p>
           </div>
 
           <div className='app__header-resumeDonwload'>
-            <a href={resume}  target={'_blank'} rel='noreferrer'>See my Resume</a>
+            <a href={resume}  target={'_blank'} rel='noreferrer'>{language === 'English' ? 'See my Resume' : 'Baixar Curriculum'}</a>
           </div>
         </div>
       </motion.div>

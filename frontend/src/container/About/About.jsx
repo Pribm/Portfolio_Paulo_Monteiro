@@ -1,33 +1,45 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import './About.scss'
 import { motion } from 'framer-motion'
 
-import {images} from '../../constants'
 import { client, urlFor } from '../../client'
 import {AppWrapper, MotionWrapper} from '../../wrapper'
+import Context from '../../Context'
 
 
 
 
 const About = () => {
-
   const [abouts, setAbouts] = useState([])
 
+  const [language] = useContext(Context)
+
+
   useEffect(() => {
-    const query = '*[_type == "abouts"]'
+   // const query = '*[_type == "abouts"]{title,imgUrl,description,language->{language}}'
+   const query = `*[_type == "abouts" && language == "${language}"]`
     client.fetch(query).then(data => {
       setAbouts(data)
     })
-  }, [])
+  }, [language])
 
   return (
     <React.Fragment>
       <h2 className='head-text'>
-        Using technology 
-        <span> and communication</span>
+        {language === "English" && 'Using technology'}
+        {language === "Portuguese" && 'Usando tecnologia'}  
+        <span>
+        {language === "English" && 'and communication'}
+        {language === "Portuguese" && ' e comunicação'}    
+        </span>
         <br />
-        and 
-        <span> making new customers!</span>
+        {language === "English" && ' to'}
+        {language === "Portuguese" && ' para'} 
+        <span>
+        {language === "English" && ' make new customers!'}
+        {language === "Portuguese" && ' fazer novos clientes'} 
+          
+        </span>
       </h2>
 
       <div className="app__profiles">
