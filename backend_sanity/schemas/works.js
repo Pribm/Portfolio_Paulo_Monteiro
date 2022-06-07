@@ -25,12 +25,19 @@ export default {
         type: 'string',
       },
       {
-        name: 'imgUrl',
-        title: 'ImageUrl',
-        type: 'image',
-        options: {
-          hotspot: true,
-        },
+        name: 'images',
+        title: 'Images',
+        type: 'array',
+        of: [
+          {
+            name: 'imgUrl',
+            title: 'ImageUrl',
+            type: 'image',
+            options: {
+              hotspot: true,
+            },
+          }
+        ]
       },
    
       {
@@ -45,6 +52,18 @@ export default {
          }
        ]
       },
+
+      {
+        name: 'photo_only',
+        title: 'Photo Only',
+        type: 'boolean'
+      },
+
+      {
+        name: 'language',
+        title: 'Language',
+        type: 'string',
+      }
      
     ],
   };

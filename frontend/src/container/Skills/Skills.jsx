@@ -17,7 +17,7 @@ const Skills = () => {
   const [language] = useContext(Context)
 
   useEffect(() => {
-    const skillsQuery = '*[_type == "skills"]'
+    const skillsQuery = '*[_type == "skills"] | order(name asc)'
 
     client.fetch(skillsQuery).then(data => {
       setSkills(data)
@@ -39,7 +39,7 @@ const Skills = () => {
                 className="app__skills-item app__flex"
                 key={skill.name+index}
               >
-                <div className='app__flex' style={{backgroundColor: skill.bgColor}}>
+                <div className='app__flex app__skills-img' style={{backgroundColor: skill.bgColor}}>
                   <img src={urlFor(skill.icon)+'?w=70&h=70'} alt={skill.name}/>
                 </div>
                 <p className='p-text' style={{marginTop: '15px'}}>{skill.name}</p>

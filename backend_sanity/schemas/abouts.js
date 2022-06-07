@@ -21,6 +21,11 @@ export default{
               hotspot: true,
             },
         },
+        {
+          name: 'language',
+          title: 'Language',
+          type: 'string',
+        }
         
     ]
 }

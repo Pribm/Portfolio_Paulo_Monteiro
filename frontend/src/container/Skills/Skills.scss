@@ -17,6 +17,8 @@
         flex-direction: column;
         justify-content: center;
         margin: 1rem;
+        padding: 1rem;
+        
         
         img{
             background-color: var(--white-color);
@@ -24,8 +26,14 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            -webkit-box-shadow: 0px 0px 1px 0px #00000010; 
-            box-shadow: 0px 0px 15px 5px #00000010;
         }
+    }
+
+    &-img{
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        padding: .5rem;
+        -webkit-box-shadow: 0px 0px 1px 0px #00000010; 
+        box-shadow: 0px 0px 15px 5px #00000010;
     }
 }
