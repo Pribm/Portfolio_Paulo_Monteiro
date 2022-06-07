@@ -193,4 +193,29 @@
         background-color: #fff;
         top: -25px;
     }
+
+    &-mobile{
+       // border: solid red;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+
+        a, div{
+            color: #fff;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            padding: .5rem;
+            margin: 0rem .5rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        svg{
+            font-size: 2rem;
+        }
+    }
 }
