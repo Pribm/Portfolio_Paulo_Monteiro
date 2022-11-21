@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/Portfolio_Paulo_Monteiro/static/css/main.a6cd99b8.css",
-    "main.js": "/Portfolio_Paulo_Monteiro/static/js/main.3604e614.js",
-    "static/media/profile.png": "/Portfolio_Paulo_Monteiro/static/media/profile.fd8af36173ab4be58794.png",
+    "main.css": "/Portfolio_Paulo_Monteiro/static/css/main.dc076dfe.css",
+    "main.js": "/Portfolio_Paulo_Monteiro/static/js/main.bdbd79ae.js",
     "static/media/PAULO VINÍCIUS RIBEIRO MONTEIRO - RESUME.pdf": "/Portfolio_Paulo_Monteiro/static/media/PAULO VINÍCIUS RIBEIRO MONTEIRO - RESUME.4e5d4dc212352f7debbe.pdf",
     "static/media/about02.png": "/Portfolio_Paulo_Monteiro/static/media/about02.7a3df03410ee756268ec.png",
     "static/media/about01.png": "/Portfolio_Paulo_Monteiro/static/media/about01.080509de05322b7aafda.png",
+    "static/media/profile.png": "/Portfolio_Paulo_Monteiro/static/media/profile.4591a2c3c9655cc0f5d6.png",
     "static/media/bgIMG.png": "/Portfolio_Paulo_Monteiro/static/media/bgIMG.c39101e520e2997fc6d4.png",
     "static/media/bgWhite.png": "/Portfolio_Paulo_Monteiro/static/media/bgWhite.79658cadae50b3b16ee5.png",
     "static/media/about03.png": "/Portfolio_Paulo_Monteiro/static/media/about03.c26c2547bb1a423cf283.png",
@@ -16,12 +16,12 @@
     "static/media/logo192.png": "/Portfolio_Paulo_Monteiro/static/media/logo192.6a8c995810ca6618a1c9.png",
     "static/media/email.png": "/Portfolio_Paulo_Monteiro/static/media/email.37b9e890eea501421fbf.png",
     "index.html": "/Portfolio_Paulo_Monteiro/index.html",
-    "static/media/circle.svg": "/Portfolio_Paulo_Monteiro/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
-    "main.a6cd99b8.css.map": "/Portfolio_Paulo_Monteiro/static/css/main.a6cd99b8.css.map",
-    "main.3604e614.js.map": "/Portfolio_Paulo_Monteiro/static/js/main.3604e614.js.map"
+    "static/media/circle.svg": "/Portfolio_Paulo_Monteiro/static/media/circle.ae5f84b3853b9e34aa83cf8dada715c5.svg",
+    "main.dc076dfe.css.map": "/Portfolio_Paulo_Monteiro/static/css/main.dc076dfe.css.map",
+    "main.bdbd79ae.js.map": "/Portfolio_Paulo_Monteiro/static/js/main.bdbd79ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6cd99b8.css",
-    "static/js/main.3604e614.js"
+    "static/css/main.dc076dfe.css",
+    "static/js/main.bdbd79ae.js"
   ]
 }
