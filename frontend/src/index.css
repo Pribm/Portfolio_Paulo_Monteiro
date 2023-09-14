@@ -11,7 +11,27 @@
     --brown-color: #46364a;
     --white-color: #ffffff;
 
+    /* Dark Mode */
+    --dark-primary-color: #030303; 
+    --dark-secondary-color: #747b89;
+    --dark-black-color: #efe9e9; 
+    --dark-lightGray-color: #bbc7d9;
+    --dark-gray-color: #7a7e80; 
+    --dark-brown-color: #46364a;
+    --dark-white-color: #424343;
+
     --navbar-height: 120px;
+  }
+
+  .dark-mode {
+    --primary-color: var(--dark-primary-color);
+    --secondary-color: var(--dark-secondary-color);
+    --black-color: var(--dark-black-color);
+    --lightGray-color: var(--dark-lightGray-color);
+    --gray-color: var(--dark-gray-color);
+    --brown-color: var(--dark-brown-color);
+    --white-color: var(--dark-white-color);
+    /* Adicione mais variáveis conforme necessário para o modo escuro */
   }
 
 * {

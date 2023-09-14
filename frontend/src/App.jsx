@@ -8,10 +8,11 @@ import Context from './Context'
 export default function App() {
 
   const [language, setLanguage] = React.useState("English")
+  const [darkMode, setDarkMode] = React.useState(true)
   
   return (
-    <Context.Provider value={[language, setLanguage]}>
-        <div className='app'>
+    <Context.Provider value={[language, setLanguage, darkMode, setDarkMode]}>
+        <div className={`app ${darkMode ? 'dark-mode' : ''}`}>
           <Navbar/>
           <Header/>
           <About/>

@@ -10,6 +10,7 @@ import './Header.scss'
 
 import resume from '../../assets/PAULO VINÍCIUS RIBEIRO MONTEIRO - RESUME.pdf'
 import Context from '../../Context'
+import ThreeDBackGround from '../../components/3dBackground/ThreeDBackGround'
 
 const scaleVariants = {
   whileInView: {
@@ -29,6 +30,9 @@ const Header = () => {
   return (
     <>
       <header className="app__header app__flex">
+        <div className='app__header-background'>
+          <ThreeDBackGround/>
+        </div>
 
         <motion.div
           whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -56,7 +60,7 @@ const Header = () => {
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: .5, delayChildren: .5 }}
           className='app__header-img'
@@ -83,8 +87,7 @@ const Header = () => {
               )
             })}
           </motion.div>
-        </motion.div>
-
+        </motion.div> */}
 
       </header>
     </>

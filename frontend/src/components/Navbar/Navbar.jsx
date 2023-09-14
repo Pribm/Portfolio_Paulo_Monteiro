@@ -3,9 +3,10 @@ import { images } from '../../constants'
 import './Navbar.scss'
 
 import { HiMenuAlt4, HiX} from 'react-icons/hi'
+import { TbBulbOff, TbBulb } from 'react-icons/tb'
 import { motion } from 'framer-motion'
 
-import { US, BR } from 'country-flag-icons/react/3x2'
+import { AU, BR } from 'country-flag-icons/react/3x2'
 import Context from '../../Context'
 
 
@@ -16,7 +17,7 @@ const Navbar = () => {
 
     const [toggle, setToggle] = React.useState(false)
 
-    const [language, setLanguage] = React.useContext(Context)
+    const [language, setLanguage, darkMode, setDarkMode] = React.useContext(Context)
 
     if(language === 'English'){
         navLinks = ['home', 'about', 'work', 'skills','contact']
@@ -54,11 +55,19 @@ const Navbar = () => {
 
         <div className='app__navbar-languages'>
             <div className='app__navbar-language'>
-                <US className={language === 'English' ? 'active' : ''} onClick={() => setLanguage('English')}/>
+                <AU className={language === 'English' ? 'active' : ''} onClick={() => setLanguage('English')}/>
             </div>
 
             <div className='app__navbar-language'>
                 <BR className={language === 'Portuguese' ? 'active' : ''} onClick={() => setLanguage('Portuguese')}/>
+            </div>
+            <div className='app__navbar-darkModeIcon'>
+                {
+                    darkMode ?
+                    <TbBulb size={30} onClick={() => setDarkMode(false)}/>
+                    :
+                    <TbBulbOff size={30} onClick={() => setDarkMode(true)}/>
+                }
             </div>
         </div>
 
