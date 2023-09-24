@@ -71,10 +71,7 @@ const Navbar = () => {
             </div>
         </div>
 
-        <div className="app__navbar-menu">
-            <HiMenuAlt4 onClick={() => setToggle(true)} />
-
-            {
+            {/* {
                 toggle && (
                     <motion.div
                         whileInView={{x: [300, 0]}}
@@ -85,8 +82,11 @@ const Navbar = () => {
                     </motion.div>
                 )
 
-            }
-        </div>
+            } */}
+
+        {/* <div className="app__navbar-menu" onClick={() => setToggle(true)} >
+            <HiMenuAlt4 />
+        </div> */}
     </nav>
   )
 }

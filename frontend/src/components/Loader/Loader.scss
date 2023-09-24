@@ -1,0 +1,41 @@
+// height: '100vh',
+//             width: '100vw',
+//             color: 'black',
+//             background: 'white',
+//             position: 'absolute',
+//             top: 0,
+//             right: 0,
+//             zIndex: 100000,
+//             fontSize: '5rem'
+
+.app__loader {
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    background: var(--primary-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_img {
+        &_container {
+
+            position: relative;
+        }
+
+        &_unloaded {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-image: url('../../assets/logo.png'); /* URL da imagem colorida */
+            background-size: cover;
+            background-position: center center;
+        }
+
+    }
+}
