@@ -4,6 +4,20 @@
     flex-direction: column;
 }
 
+.app__flex button {
+    display: flex;
+    background-color: var(--blue-color);
+    border: none;
+    padding: .3rem 1rem;
+    color: white;
+    border-radius: .3rem;
+    transition: scale ease-in-out .3s;
+}
+
+.app__flex button:hover {
+    scale: 1.1;
+}
+
 .app__modal {
     padding: 2rem;
 
@@ -187,11 +201,12 @@
 
     .app__work-tag {
         position: absolute;
-
         padding: 0 1rem;
         border-radius: 10px;
         background-color: #fff;
         top: -25px;
+
+        padding-top: 1rem;
     }
 
     &-mobile{

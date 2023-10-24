@@ -54,8 +54,8 @@ const Header = () => {
               <p className="p-text">{language === 'English' ? 'Graphic Designer' : 'Designer Gráfico'}</p>
             </div>
 
-            <div className='app__header-resumeDonwload'>
-              <a href={resume} target={'_blank'} rel='noreferrer'>{language === 'English' ? 'See my Resume' : 'Baixar Curriculum'}</a>
+            <div className='app__header-resumeDonwload bg-blue'>
+              <a className='text-white' href={resume} target={'_blank'} rel='noreferrer'>{language === 'English' ? 'See my Resume' : 'Baixar Curriculum'}</a>
             </div>
           </div>
         </motion.div>

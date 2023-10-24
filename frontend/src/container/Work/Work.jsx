@@ -137,7 +137,7 @@ const Work = () => {
             <div className='app__work-item app__flex' key={index}>
               <div className="app__work-img app__flex">
                 <img src={urlFor(work.images[0])} alt={''} />
-                <motion.div
+                {/* <motion.div
                   whileHover={{ opacity: [0, 1] }}
                   transition={{ duration: .25, ease: 'easeInOut', staggerChildren: .5 }}
                   className="app__work-hover d-md-flex d-none justify-content-center align-items-center"
@@ -173,18 +173,66 @@ const Work = () => {
                   </a>
                   }
                   
-                </motion.div>
+                </motion.div> */}
               </div>
 
               <div className='app__work-content app__flex'>
-                <h4 className='bold-text' style={{ marginTop: 15 }}>{work.title}</h4>
-                <p className='p-text' >{work.description}</p>
+                <h4 className='bold-text text-black' style={{ marginTop: 15 }}>{work.title}</h4>
+                <p className='p-text text-black' >{work.description}</p>
                 <div className='app__work-tag app__flex'>
-                  <p className='p-text'>{work.tags[0]}</p>
+                  <p className='p-text text-black'>{work.tags[0]}</p>
                 </div>
-
-                <div className="d-flex d-md-none app__work-content-mobile">
+                <div style={{display: 'flex', gap: '1rem'}}>
                 {
+                    (work.photo_only !== true) ?
+                    //OPEN WEBSITE
+                    <a href={work.projectLink} target="_blank" rel='noreferrer' style={{textDecoration: 'none'}}>
+                      <motion.button
+                        whileInView={{ scale: [0, 1] }}
+                        transition={{ duration: .25 }}
+                        className="app__flex"
+                      >
+                        <span style={{marginRight: '.3rem'}}>
+                        Website
+                        </span>
+                        <AiFillEye />
+                      </motion.button>
+                    </a>
+                    :
+
+                    //OPEN CAROUSEL
+                    <div onClick={() => handleModalImage(work)} className='app__flex'>
+                      <motion.button
+                        whileInView={{ scale: [0, 1] }}
+                        transition={{ duration: .25 }}
+                        className="app__flex"
+                      >
+                        <span style={{marginRight: '.3rem'}}>
+                        Gallery
+                        </span>
+                        <AiFillEye />
+                      </motion.button>
+                    </div>
+                  }
+                  {
+                    !work.photo_only &&
+                    <a href={work.codeLink} target="_blank" rel='noreferrer' style={{textDecoration: 'none'}}>
+                    <motion.button
+                      whileInView={{ scale: [0, 1] }}
+                      transition={{ duration: .25 }}
+                      className="app__flex"
+                      
+                    >
+                      <span style={{marginRight: '.3rem'}}>
+                        GitHub
+                        </span>
+                      <AiFillGithub />
+                    </motion.button>
+                  </a>
+                  }
+                </div>
+                <div className="d-flex d-md-none app__work-content-mobile">
+                  {
                     (work.photo_only !== true) ?
                     <a href={work.projectLink} target="_blank" rel='noreferrer'>
                         <AiFillEye />

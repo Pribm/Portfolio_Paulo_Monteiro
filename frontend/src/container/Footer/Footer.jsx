@@ -64,16 +64,16 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
-          <a href="mailto:monteiro.paulovinicius@gmail.com" className='p-text'>{language === "English" ? "Send me an email!" : "Envie-me um email"}</a>
+          <a href="mailto:monteiro.paulovinicius@gmail.com" className='p-text text-black'>{language === "English" ? "Send me an email!" : "Envie-me um email"}</a>
         </div>
 
         <div className="app__footer-card">
           <img src={images.mobile} alt="mobile" />
-          <a href="tel:+55 (092)982772050" className='p-text'>{language === "English" ? "Contact me by phone!" : "Entre em contato por telefone"}</a>
+          <a href="tel:+55 (092)982772050" className='p-text text-black'>{language === "English" ? "Contact me by phone!" : "Entre em contato por telefone"}</a>
         </div>
       </div>
 
-      {
+      {/* {
         !formSubmitted ? 
         <div className='app__footer-form app__flex'>
         <div className="app__flex">
@@ -105,7 +105,7 @@ const Footer = () => {
       <div>
         <h3 className='head-text'>Thanks for getting in touch! 🙂</h3>
       </div>
-      }
+      } */}
     </div>
   )
 }

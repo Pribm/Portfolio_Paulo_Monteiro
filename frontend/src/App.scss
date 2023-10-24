@@ -74,8 +74,12 @@
 .p-text {
   font-size: 0.8rem;
   text-align: left;
-  color: var(--gray-color);
+  color: var(--black-color);
   line-height: 1.5;
+
+  a {
+    color: var(--black-color);
+  }
 
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
@@ -95,6 +99,18 @@
   @media screen and (max-width: 450px) {
     font-size: 0.9rem;
   }
+}
+
+.bg-blue {
+  background-color: #313bac;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
 }
 
 .app__social {
