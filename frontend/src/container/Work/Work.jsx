@@ -31,7 +31,7 @@ const Work = () => {
   const [language] = useContext(Context)
 
   useEffect(() => {
-    const query = `*[_type == "works" && !(_id in path('drafts.**')) && language == "${language}"]`
+    const query = `*[_type == "works" && !(_id in path('drafts.**')) && language == "${language}"] | order(_createdAt desc)`
     
     client.fetch(query)
       .then(data => {
